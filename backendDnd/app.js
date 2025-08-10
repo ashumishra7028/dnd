@@ -10,7 +10,7 @@ const app = express();
 
 // ✅ CORS config sabse upar
 const allowedOrigins = [
-  "https://tumhara-vercel-url.vercel.app", // Vercel ka actual URL
+  "https://dnd-beta-khaki.vercel.app/", // Vercel ka actual URL
   "http://localhost:3000" // local testing
 ];
 app.use(cors({
