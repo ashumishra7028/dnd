@@ -17,12 +17,9 @@ app.use(bodyParser.json());
 
 // MongoDB Connection
 mongoose
-  .connect("mongodb://127.0.0.1:27017/orderFormDB", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("MongoDB connected"))
-  .catch((err) => console.error("MongoDB connection error:", err));
+  mongoose.connect("mongodb+srv://admin:admin@cluster0.k2l2ojw.mongodb.net/mydbname?retryWrites=true&w=majority")
+.then(() => console.log("MongoDB connected"))
+.catch((err) => console.log("MongoDB connection error:", err));
 
 // Mongoose Schema
 const formSchema = new mongoose.Schema({
@@ -52,6 +49,10 @@ app.post("/api/submit", async (req, res) => {
 });
 
 // Start Server
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+app.listen(5000, () => {
+  console.log("Server running on port 5000");
 });
+
+//app.listen(PORT, () => {
+//  console.log(`Server running on http://localhost:${PORT}`);
+//});
