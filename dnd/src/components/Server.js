@@ -37,7 +37,7 @@ const formSchema = new mongoose.Schema({
 const Form = mongoose.model("Form", formSchema);
 
 // Routes
-app.post("/api/submit", async (req, res) => {
+app.post("https://dnd-4olv.onrender.com/api/submit", async (req, res) => {
   try {
     const form = new Form(req.body);
     await form.save();
