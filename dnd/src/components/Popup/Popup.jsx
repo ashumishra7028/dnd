@@ -76,8 +76,8 @@ const Popup = ({ orderPopup, setOrderPopup, mode = "join" }) => {
 
     const endpoint =
       mode === "garba"
-        ? "http://localhost:8000/api/register"
-        : "http://localhost:8000/api/submit";
+        ? "https://dnd-4olv.onrender.com:8000/api/register"
+        : "https://dnd-4olv.onrender.com:8000/api/submit";
 
     try {
       const response = await fetch(endpoint, {
